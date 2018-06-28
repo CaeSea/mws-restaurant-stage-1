@@ -135,18 +135,19 @@ nav h1 a {
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
 	display: grid;
+	grid-gap: 1em;
 	grid-template-columns:repeat(3, 1fr);
+	justify-items: center;
   background-color: #f3f3f3;
   list-style: outside none none;
-  margin: 0;
   padding: 30px 15px 60px;
-  text-align: center;
 }
 #restaurants-list li {
+	display: grid;
+	justify-items: start;
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 15px;
   min-height: 380px;
   padding: 25px 30px;
   text-align: left;
@@ -156,7 +157,7 @@ nav h1 a {
   background-color: #ccc;
   margin: 0;
   max-width: 100%;
-  min-height: 50%;
+  min-height: 30%;
   min-width: 100%;
 }
 #restaurants-list li h1 {
@@ -181,7 +182,7 @@ nav h1 a {
   font-size: 10pt;
   margin: 15px 0 0;
   padding: 8px 30px 10px;
-  text-align: center;
+	justify-self: center;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -276,4 +277,14 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/*--- Media Queries ---*/
+
+@media only screen and (max-width: 899px) {
+
+	#restaurants-list {
+		grid-template-columns:repeat(2, 1fr);
+	}
+
 }

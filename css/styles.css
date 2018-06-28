@@ -308,7 +308,7 @@ nav h1 a {
 	}
 
 	.filter-options h2 {
-		margin: 10px 5px 5px;
+		margin: 5px;
 		width: 100%;
 		text-align: center;
 	}
@@ -320,6 +320,28 @@ nav h1 a {
 }
 
 @media only screen and (max-width: 420px) {
+
+	nav h1 a {
+	  font-size: 12pt;
+	}
+
+	#restaurants-list li h1 {
+		font-size: 12pt;
+		text-align: center;
+	}
+
+	#restaurants-list li a {
+		justify-self: center;
+		text-align: center;
+	}
+
+	#restaurants-list p {
+		text-align: center;
+	}
+
+	#restaurants-list li a {
+		justify-self: center;
+	}
 
 	.filter-options {
 		height: 125px;

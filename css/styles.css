@@ -197,19 +197,19 @@ nav h1 a {
 /* ====================== Restaurant Details ====================== */
 .inside header {
   top: 0;
-  width: 100%;
+  width: 50%;
   z-index: 1000;
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 84%;
+  height: 100%;
   position: fixed;
   right: 0;
-  top: 80px;
+  top: 0;
   width: 50%;
 }
 .inside #map {
-  background-color: #ccc;
+  background-color: white;
   height: 100%;
   width: 100%;
 }
@@ -219,7 +219,7 @@ nav h1 a {
   width: 100%;
 }
 #restaurant-name {
-  color: #f18200;
+  color: #942D00;
   font-family: Arial,sans-serif;
   font-size: 18pt;
   font-weight: 200;
@@ -252,12 +252,13 @@ nav h1 a {
   border-top: 1px solid #fff;
   padding: 20px 40px 30px;
   width: 50%;
+	background-color: white;
 }
 #reviews-container {
   padding: 30px 40px 80px;
 }
 #reviews-container h2 {
-  color: #f58500;
+  color: #942D00;
   font-size: 18pt;
   font-weight: 300;
   letter-spacing: -1px;
@@ -323,7 +324,8 @@ nav h1 a {
 
 }
 
-@media only screen and (max-width: 799px) {
+/*--- For restaurant.html only ---*/
+@media only screen and (max-width: 895px) {
 
 	.inside header {
 	  position: static;

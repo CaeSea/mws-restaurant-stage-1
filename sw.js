@@ -36,8 +36,8 @@ self.addEventListener('install', function(event) {
         ]
       );
     }).catch(function() {
-      console.log('error creating cache.');
-    });
+      console.log('Error registering cache.');
+    })
   );
 });
 
@@ -47,7 +47,23 @@ self.addEventListener('fetch', function(event) {
       if(response) return response;
       return fetch(event.request);
     }).catch(function() {
-      console.log('Cannot complete fetch request.');
-    });
+      console.log('Error with fetch request.');
+    })
   )
+});
+
+
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          return cacheName.startsWith('resRevs-') &&
+                 cacheName != staticCacheName;
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
 });

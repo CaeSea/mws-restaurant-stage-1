@@ -12,6 +12,7 @@
 
 <body>
   <header>
+    <a href="#neighborhoods-select" class="skip-link">Skip Map Feature</a>
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
@@ -19,10 +20,10 @@
 
   <main id="maincontent">
     <section id="map-container">
-      <div id="map" aria-label="map" role="application"></div>
+      <div id="map" aria-label="map" role="application" tabindex="-1"></div>
     </section>
     <section>
-      <div class="filter-options">
+      <div class="filter-options" tabindex="-1">
         <h2>Filter Results</h2>
         <div class="option-wrap">
           <label for="neighborhoods-select">
